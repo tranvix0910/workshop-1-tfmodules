@@ -17,6 +17,6 @@ module "vpc" {
 
 # Create subnet group for MongoDB
 resource "aws_docdb_subnet_group" "mongodb_subnet_group" {
-  subnet_ids = module.student_management_vpc.private_subnets
+  subnet_ids = module.vpc.private_subnets
   name       = "mongodb-subnet-group"
 }
